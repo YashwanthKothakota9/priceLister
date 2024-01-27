@@ -1,3 +1,4 @@
+import Searchbar from '@/components/Searchbar';
 import Image from 'next/image';
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
               Powerful, self-serve product and growth analytics to help you
               convert, engage, and retain more.
             </p>
-            SearchBar
+            <Searchbar />
           </div>
           HeroCarousel
         </div>
