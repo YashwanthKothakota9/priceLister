@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align='center'>Price Lister - A web scraper for your favorite products</h1>
 
-## Getting Started
+- An application that automatically tracks your favorite products at [Amazon](https://www.amazon.in/) and notifies your email when the price is low.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Screenshots
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img width="1710" alt="Screenshot 2024-01-28 at 7 17 17 PM" src="https://github.com/YashwanthKothakota9/priceLister/assets/97182453/7e05cc92-031c-452f-87da-3184d298846f">
+<img width="1710" alt="Screenshot 2024-01-28 at 7 17 47 PM" src="https://github.com/YashwanthKothakota9/priceLister/assets/97182453/c1adbf2d-2eeb-44cb-a3a4-3fe279e8cc6c">
+<img width="1709" alt="Screenshot 2024-01-28 at 7 18 02 PM" src="https://github.com/YashwanthKothakota9/priceLister/assets/97182453/7412b978-33d7-4cd0-9538-08dab492ff82">
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/?ref=cal.com)
+- [React.js](https://reactjs.org/?ref=cal.com)
+- [Tailwind CSS](https://tailwindcss.com/?ref=cal.com) for styling
+- [BrightData](https://brightdata.com) for web unlocker
+- [Cheerio](https://cheerio.js.org/) for scraping web pages
+- [MongoDB](https://cloud.mongodb.com) for database
+- [Nodemailer](https://nodemailer.com/) for emails
+- [CronJob](https://cron-job.org/en/) for scheduled execution of scripts
+- [Vercel](https://vercel.com) for deployment
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Can scrape specific product page of amazon and list in the product details page
+- Store users searched products in Database to notify users on price updates
+- Can subscribe to product updates with email id
