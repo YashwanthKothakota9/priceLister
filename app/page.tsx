@@ -1,10 +1,15 @@
 import HeroCarousel from '@/components/HeroCarousel';
+import ProductCard from '@/components/ProductCard';
 import Searchbar from '@/components/Searchbar';
+import { getAllProducts } from '@/lib/actions';
 import Image from 'next/image';
+import React from 'react';
 
-export default function Home() {
+export default async function Home() {
+  const allProducts = await getAllProducts();
+
   return (
-    <>
+    <React.Fragment>
       <section className="px-6 md:px-20 py-24  ">
         <div className="flex max-xl:flex-col gap-16">
           <div className="flex flex-col justify-center">
@@ -19,7 +24,7 @@ export default function Home() {
             </p>
             <h1 className="head-text">
               Unleash the Power of
-              <span className="text-primary"> PriceLsiter</span>
+              <span className="text-primary"> PriceLister</span>
             </h1>
             <p className="mt-6">
               Powerful, self-serve product and growth analytics to help you
@@ -35,11 +40,11 @@ export default function Home() {
         <h2 className="section-text">Trending</h2>
 
         <div className="flex flex-wrap gap-x-8 gap-y-16">
-          {['Apple Iphone 15 ProMax', 'Book', 'Sneakers'].map((product) => (
-            <div>{product}</div>
+          {allProducts?.map((product) => (
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       </section>
-    </>
+    </React.Fragment>
   );
 }

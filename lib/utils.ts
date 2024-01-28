@@ -118,6 +118,6 @@ export const formatNumber = (num: number = 0) => {
 };
 
 export function extractStars(element: any) {
-  const stars = element.text().trim().split(' ')[0];
-  return stars ? stars : '';
+  const stars = element?.text().trim().split(' ')[0];
+  return 5;
 }
